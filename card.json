@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "image": "https://rickandmorty.fandom.com/wiki/Rick_Sanchez?file=Rick.png"
+    },
+    {
+      "id": 2,
+      "name": "Morty Smith",
+      "image": "https://rickandmorty.fandom.com/wiki/Morty_Smith?file=Morty_Smith.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Summer Smith",
+      "image": "https://rickandmorty.fandom.com/wiki/Summer_Smith?file=Summer_is_cool.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Beth Smith",
+      "image": "https://rickandmorty.fandom.com/wiki/Beth_Smith?file=Beth_Smith.png"
+    },
+    {
+      "id": 5,
+      "name": "Jerry Smith",
+      "image": "https://rickandmorty.fandom.com/wiki/Jerry_Smith?file=Jerry_Smith.png"
+    },
+    {
+      "id": 6,
+      "name": "Mr. Poopy Butthole",
+      "image": "https://rickandmorty.fandom.com/wiki/Mr._Poopybutthole?file=Mr_poopy_butthole.png"
+    },
+    {
+      "id": 7,
+      "name": "Mr. Meeseeks",
+      "image": "https://rickandmorty.fandom.com/wiki/Mr._Meeseeks?file=MeeseeksHQ.png"
+    },
+    {
+      "id": 8,
+      "name": "Bird Person",
+      "image": "https://rickandmorty.fandom.com/wiki/Birdperson?file=Birdperson.png"
+    },
+    {
+      "id": 9,
+      "name": "Tammy",
+      "image": "https://rickandmorty.fandom.com/wiki/Tammy_Guetermann?file=Tammy.png"
+    },
+    {
+      "id": 10,
+      "name": "Pickle Rick",
+      "image": "https://rickandmorty.fandom.com/wiki/Pickle_Rick/Transcript?file=Pickle-Rick-giveaway.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Jessica",
+      "image": "https://rickandmorty.fandom.com/wiki/Jessica?file=Jessica.png"
+    },
+    {
+      "id": 12,
+      "name": "Evil Morty",
+      "image": "https://rickandmorty.fandom.com/wiki/Evil_Morty?file=Eyepatchevilmorty.jpg"
+    }
+  ]
