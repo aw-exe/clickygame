@@ -1,8 +1,8 @@
-import Navbar from './navbar';
-import Jumbotron from './jumbotron';
-import Card from './card';
-import Wrapper from './wrapper';
-import Footer from './footer'
+import Navbar from './Layout/Navbar';
+import Jumbotron from './Layout/Jumbotron';
+import Card from './Layout/Card';
+import Wrapper from './Layout/Wrapper';
+import Footer from './Layout/Footer'
 
 export {
     Navbar,
