@@ -6,7 +6,7 @@ import {
   Wrapper,
   Footer
 } from "./components";
- import RM from "./RM.json"
+ import rm from './rm.json'
 
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
     <Jumbotron />
     <Wrapper />
     <Card />
-    <RM />
     <Footer />
     </React.Fragment>
    
