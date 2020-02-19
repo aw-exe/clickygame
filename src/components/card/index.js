@@ -8,19 +8,17 @@ const propTypes = {
     image: PropTypes.string.isRequired,
 };
 
-const FriendCard = ({
+const Card = ({
     id,
     name,
     image,
-}) => (
+}) => { 
+  return (
     <div className="card">
-      <div className="img-container">
-        <img alt={name} src={image} />
-      </div>
-      <div className="content">
+      <img alt={name} src={image} />
     </div>
-  );
+  )};
 
-card.propTypes = PropTypes;
+Card.propTypes = propTypes;
 
-export default card;
+export default Card;

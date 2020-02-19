@@ -5,4 +5,4 @@ function Wrapper(props) {
   return <div className="wrapper">{props.children}</div>;
 }
 
-export default wrapper;
+export default Wrapper;

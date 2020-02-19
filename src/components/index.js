@@ -1,13 +1,13 @@
-import navbar from './navbar';
-import jumbotron from './jumbotron';
-import card from './card';
-import wrapper from './wrapper';
-import footer from './footer'
+import Navbar from './navbar';
+import Jumbotron from './jumbotron';
+import Card from './card';
+import Wrapper from './wrapper';
+import Footer from './footer'
 
 export {
-    navbar,
-    jumbotron,
-    card,
-    wrapper,
-    footer
+    Navbar,
+    Jumbotron,
+    Card,
+    Wrapper,
+    Footer
 };

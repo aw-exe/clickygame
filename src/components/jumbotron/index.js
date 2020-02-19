@@ -1,7 +1,6 @@
 import React from "react";
-import "./style.css";
 
-const jumbotron = () => {
+const Jumbotron = () => {
 
     return(
     
@@ -14,4 +13,4 @@ const jumbotron = () => {
     );
 };
     
-export default jumbotron;
+export default Jumbotron;
