@@ -6,7 +6,9 @@ const Footer = () => {
     
     <div className="footer" style={style.footer}> 
         <div className="container"></div>
-        <div className="text-center" style={style.text}>Footer</div>
+        <div className="text-center" style={style.text}>Copyright</div>
+        <div className="text-center" style={style.text}>https://github.com/aw-exe</div>
+
     </div>
     );
 };
@@ -19,7 +21,7 @@ const style = {
         left: 0,
         right: 0,
         background: '#343a40',
-        padding: '10px'
+        padding: '5px'
     },
 
     text: {
