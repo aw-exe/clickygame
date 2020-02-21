@@ -11,3 +11,6 @@ function Wrapper (props) {
 }
 
 export default Wrapper;
+
+//import Card into wrapper - use Map
+//import data from rm.json

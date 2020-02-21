@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <ul>
         <li className="navbar-brand float-left">Clicky Memory Game</li>
-        <li className="navbar-brand float-right">
+        <li className="navbar-brand float-right" style={style.score}>
             Score:
             |
             Top Score:
@@ -17,5 +17,11 @@ const Navbar = () => {
     </nav>
     );
 };
+
+const style = {
+    score: {
+        alignment: 'right'
+    }
+}
     
 export default Navbar;
