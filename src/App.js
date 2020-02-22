@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Navbar,
   Jumbotron,
@@ -10,7 +10,8 @@ import Character from './rm.json'
 import { render } from '@testing-library/react';
 
 
-function shuffleCharacter(array) {
+
+const shuffleCharacter(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -18,7 +19,7 @@ function shuffleCharacter(array) {
   return array;
 };
 
-const App = () => {
+class App extends Component {
 
   // Set this.state
   state = {
@@ -68,7 +69,7 @@ const App = () => {
     this.setState({ Character: shuffledCharacter });
   };
 
-  render() 
+  render() (
     return (
       <React.Fragment>
         <Navbar
@@ -97,7 +98,7 @@ const App = () => {
         <Footer/>
       </React.Fragment>
       )
-  
+    )
   }
 
 export default App;
