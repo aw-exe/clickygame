@@ -7,11 +7,8 @@ return(
 
         <div className="scores">
             <div className="current-score">
-            Current Score: {props.score}
-            </div>
-
-            <div className="current-score">
-            Top Score: {props.topScore}
+            {/* Score: {score} |
+            Top Score: {topScore}  */}
             </div>
         </div>
 
