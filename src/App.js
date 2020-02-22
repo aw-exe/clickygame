@@ -6,34 +6,25 @@ import {
   Card,
   Footer
 } from "./components";
-import Character from './rm.json'
-import { render } from '@testing-library/react';
+import characterData from './rm.json'
 
 
+const App = () => {
 
-const shuffleCharacter(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
+  const shuffleCharacter = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
-class App extends Component {
-
-  // Set this.state
-  state = {
-    Character,
-    currentScore: 0,
-    topScore: 0,
-    rightWrong: "",
-    clicked: [],
-  },
+  const [Character] = useState(characterData);
 
   handleClick = (id) => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
-      this.setState({ clicked: this.state.clicked.concat(id) });
+      this.useState({ clicked: this.state.clicked.concat(id) });
     } else {
       this.handleReset();
     }
@@ -41,21 +32,21 @@ class App extends Component {
 
   handleIncrement = () => {
     const newScore = this.state.currentScore + 1;
-    this.setState({
+    this.useState({
       currentScore: newScore,
       rightWrong: ""
     });
     if (newScore >= this.state.topScore) {
-      this.setState({ topScore: newScore });
+      this.useState({ topScore: newScore });
     }
     else if (newScore === 12) {
-      this.setState({ rightWrong: "You win!" });
+      this.useState({ rightWrong: "You win!" });
     }
     this.handleShuffle();
   };
 
   handleReset = () => {
-    this.setState({
+    this.useState({
       currentScore: 0,
       topScore: this.state.topScore,
       rightWrong: "Ouch! Try Again.",
@@ -66,38 +57,36 @@ class App extends Component {
 
   handleShuffle = () => {
     let shuffledCharacter = shuffleCharacter(Character);
-    this.setState({ Character: shuffledCharacter });
+    this.useState({ Character: shuffledCharacter });
   };
 
-  render() (
-    return (
-      <React.Fragment>
-        <Navbar
-          score={this.state.currentScore}
-          topScore={this.state.topScore}
-        />
+  return (
+    <React.Fragment>
+      <Navbar
+        score={this.state.currentScore}
+        topScore={this.state.topScore}
+      />
 
-        <Jumbotron/>
+      <Jumbotron/>
 
-        <Wrapper>
-          {this.state.Character.map(Character => (
-            <div className="card-container">
-              <Card
-                key={Character.id}
-                id={Character.id}
-                image={Character.image}
-                handleClick={this.handleClick}
-                handleIncrement={this.handleIncrement}
-                handleReset={this.handleReset}
-                handleShuffle={this.handleShuffle}
-              />
-            </div>
-          ))}
-        </Wrapper>
+      <Wrapper>
+        {this.state.Character.map(Character => (
+          <div className="card-container">
+            <Card
+              key={Character.id}
+              id={Character.id}
+              image={Character.image}
+              handleClick={this.handleClick}
+              handleIncrement={this.handleIncrement}
+              handleReset={this.handleReset}
+              handleShuffle={this.handleShuffle}
+            />
+          </div>
+        ))}
+      </Wrapper>
 
-        <Footer/>
-      </React.Fragment>
-      )
+      <Footer/>
+    </React.Fragment>
     )
   }
 
