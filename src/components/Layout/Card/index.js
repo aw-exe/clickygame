@@ -7,7 +7,7 @@ import React from "react";
 //     image: PropTypes.string.isRequired,
 // };
 
-const rmCard = ({
+const Card = ({
     id,
     name,
     image,
@@ -20,4 +20,4 @@ const rmCard = ({
 
 // Card.propTypes = propTypes;
 
-export default rmCard;
+export default Card;
