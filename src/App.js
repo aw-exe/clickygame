@@ -19,7 +19,9 @@ const App = () => {
     return array;
   };
 
-  const [Character] = useState(characterData);
+  const [clickedCharacter, setClickedCharacter] = useState([]);
+  const [previousTopScore, setPreviousTopScore]= useState(0);
+  const [message, setMessage ]= useState('Begin by clicking on a character')
 
   handleClick = (id) => {
     if (this.state.clicked.indexOf(id) === -1) {
@@ -63,14 +65,14 @@ const App = () => {
   return (
     <React.Fragment>
       <Navbar
-        score={this.state.currentScore}
-        topScore={this.state.topScore}
+        // score={useState.currentScore}
+        // topScore={useState.topScore}
       />
 
       <Jumbotron/>
 
       <Wrapper>
-        {this.state.Character.map(Character => (
+        {useState.Character.map(Character => (
           <div className="card-container">
             <Card
               key={Character.id}
@@ -91,3 +93,79 @@ const App = () => {
   }
 
 export default App;
+
+
+
+
+const App = () => {
+  
+  
+    const [clickedItems, setClickedItems] = useState([]);
+    const [prevTopScore, setPrevTopScore]= useState(0);
+    const [message, setMessage ]= useState('Begin by clicking an image.')
+    const [textColor, setTextColor] = useState({color:'FFFFFF'})
+    const [shakeNow, setShakeNow] = useState(false)
+   
+    const textHandler = (val, color) => {
+      const correctText = "Correct! You're hitting all the right notes.";
+      const incorrectText = "Well you're no Miles Davis! Click any image to play again."
+      const correctColor = {color: '#66ff33'}
+      const incorrectColor = {color: '#ff3300'}
+      const resultMessage = (val ? correctText : incorrectText)
+      const colorResult= (val ? correctColor : incorrectColor)
+      setMessage(resultMessage)
+      setTextColor(colorResult)
+      setShakeNow(!val)
+      
+    }
+    
+    const topScoreHandler = () => {
+      const currentScore = clickedItems.length 
+      const newScore= ((currentScore > prevTopScore) ? currentScore : prevTopScore)
+      setPrevTopScore(newScore)
+    }
+  
+    const GameOver = () => {
+      topScoreHandler()
+      setClickedItems([])
+    
+    }
+ 
+    const checkHandler = id =>{
+     if(clickedItems.includes(id)) {
+          textHandler(false)
+          return GameOver();
+      }    
+      textHandler(true)
+      setClickedItems([id,...clickedItems])  
+    } 
+  
+  return(
+      <div style={styles.backdrop}>
+           <Navbar 
+           textResult = {message}
+           score = {clickedItems.length}
+           topScore = {prevTopScore} 
+           color={textColor}
+
+           /> 
+           <Jumbotron/>
+           <Shake active={shakeNow}>
+              <Wrapper>
+              
+              {shuffle(guitars).map(guitar =>(
+                  <MemoryCard
+                    key={guitar.id}  
+                    id = {guitar.id}
+                    name = {guitar.name}
+                    bassImage = {guitar.image} 
+                    checkHandler = {checkHandler}          
+                  /> 
+                ))}
+              </Wrapper>
+              </Shake>
+          <Footer />
+      </div>
+  )
+
+}
