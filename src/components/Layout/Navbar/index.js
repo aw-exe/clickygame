@@ -1,27 +1,23 @@
 import React from "react";
 
-const Navbar = () => {
-
-    return(
-    
+const Navbar = (props) => {
+return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <ul>
-        <li className="navbar-brand float-left">Clicky Memory Game</li>
-        <li className="navbar-brand float-right" style={style.score}>
-            Score:
-            |
-            Top Score:
+        <div className="navbar-brand float-left">Clicky Memory Game</div>
 
-        </li>
-        </ul>
+        <div className="scores">
+            <div className="current-score">
+            Current Score: {props.score}
+            </div>
+
+            <div className="current-score">
+            Top Score: {props.topScore}
+            </div>
+        </div>
+
     </nav>
     );
 };
 
-const style = {
-    score: {
-        alignment: 'right'
-    }
-}
     
 export default Navbar;

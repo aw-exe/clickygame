@@ -1,23 +1,17 @@
 import React from "react";
-// import PropTypes from 'prop-types';
 
-// const propTypes = {
-//     id: PropTypes.number.isRequired,
-//     name: PropTypes.string.isRequired,
-//     image: PropTypes.string.isRequired,
-// };
-
-const Card = ({
-    id,
-    name,
-    image,
-}) => { 
-  return (
-    <div className="card mb-3">
-      <img alt={name} src={image} />
+const Card = (props) => (
+  <div 
+    className="card" 
+    value={props.id} 
+    onClick={() => props.handleClick(props.id)}
+  >
+    <div className="img-container">
+      <img alt={props.name} src={props.image}/>
     </div>
-  )};
+  </div>
+);
 
-// Card.propTypes = propTypes;
 
 export default Card;
+
